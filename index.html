@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Stopwatch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body>
+
+    <h1>This is a Stopwatch Demo</h1>
+
+    <br>
+
+    <div>
+        <input type="button" id='start' value="Start">
+        <input type="button" id='stop' value="Stop">
+        <input type="button" id='reset' value="Reset">
+    </div>
+
+    <br>
+
+    <div>
+        <p>Stopwatch Timer will show here. Press start to continue.</p>
+    </div>
+    <script>
+
+        $('document').ready(function () {
+
+            var p = document.getElementsByTagName('p')[0]
+            var sw = new stopwatch(p)
+
+            $('#start').click(function (params) {
+                sw.start()
+            });
+
+            $('#stop').click(function (params) {
+                sw.stop()
+            });
+
+            $('#reset').click(function (params) {
+                sw.reset()
+            });
+        })
+
+    </script>
+</body>
+
+</html>
